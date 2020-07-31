@@ -39,7 +39,7 @@ After cleaning my data, I had a couple of primary findings that stood out to me.
 
 While analyzing my data I wanted to see the correlation between certain values and one of them was the participation rate and the total mean scores.  Schools that tend to have lower participation rates tend to have higher test scores. Why is this?
 
-<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> O
+<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
 
 This is because the low percent of people who participate in these test are more motivated to do well on these tests than people who are forced to take these test in other states.
 
@@ -51,7 +51,7 @@ As seen on the left there is a divergent choropleth plot that displays the avera
 
 On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 presidental election. 
 
-<img src="act_politics.png" width="750"/> O
+<img src="act_politics.png" width="750"/> 
 
 
 We can see it look like more of the Rebublican states prefer the ACT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
@@ -64,20 +64,26 @@ As seen on the left there is a divergent choropleth plot that displays the avera
 
 On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 presidental election. 
 
-<img src="sat_politics.png" width="750"/> O
+<img src="sat_politics.png" width="750"/> 
 
 
 We can see it look like more of the Democrat states prefer the SAT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
 
+---
 
 # So, Does Politics Play a Role in SAT and ACT Participation Rates?
 
 
+### Not Necessarily
+
+In the map to the left the blue states indicate where the ACT is free to take. In the map to the right the yellow and orange states indicate where the ACT is mandatory to take.
+
+
+<img src="free_mandatory" width="750"/> 
 
 
 
-
-
+---
 
 ### Deliverables
 
