@@ -57,7 +57,7 @@ After cleaning my data, I had a couple of primary findings that stood out to me.
 
 While analyzing my data I wanted to see the correlation between certain values and one of them was the participation rate and the total mean scores.  Schools that tend to have lower participation rates tend to have higher test scores. Why is this?
 
-<img src="../Assests/Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
+<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
 
 This is because the low percent of people who participate in these test are more motivated to do well on these tests than people who are forced to take these test in other states.
 
