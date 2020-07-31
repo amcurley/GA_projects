@@ -56,6 +56,8 @@ On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 p
 
 We can see it look like more of the Rebublican states prefer the ACT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
 
+- Link to the tableau map: https://public.tableau.com/profile/aidan.curle#!/vizhome/DivergentChloropethMapfortheAverageSATParticipationacross20172018and2019/Sheet1?publish=yes
+
 ---
 
 ### Average SAT Participation Rate for 2017, 2018, 2019
@@ -68,6 +70,9 @@ On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 p
 
 
 We can see it look like more of the Democrat states prefer the SAT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
+
+- Link to the tableau map: https://public.tableau.com/profile/aidan.curle#!/vizhome/DivergentChloropethMapfortheAverageSATParticipationRateacross20172018and2019/Sheet2?publish=yes
+
 
 ---
 
@@ -92,7 +97,14 @@ Comparing the average ACT participation rates for 2017, 2018, and 2019 to these 
 
 If states would like a guaranteed increase in participation rate for a given state I would recommend offering the test for free and making it mandated in that specific state. This is why there is such a high percentage of people in the southern and middle states who take the ACT instead of the SAT. 
 
-- Offering the SAT during regular school hours
+However, that route is not possible to take for every state.
+
+Recommendations for states who do not have a mandation:
+- Offering the SAT and ACT during regular school hours
 - Covering all parts of the exam fees
 - Increasing access to honors and AP courses
-- Increasing access to the  PSAT/NMSQT
+- Increasing access to the PSAT
+
+These suggestions can help to increase participation rates and also mean total scores. Offering the SAT and ACT during regular school hours will increase the rates of participation. Covering all part of the exam fees will also aid in increasing the rates of participation.
+
+Increasing access to honors and AP courses will aid in the increase of the mean total scores. The earlier that students can get into higher level classes the better. This will prepare them for these types of tests. Increasing access to the PSAT and school offered prepatory classes will also help to increase the mean toal scores. 
