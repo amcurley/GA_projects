@@ -103,8 +103,8 @@ Recommendations for states who do not have a mandation:
 - Offering the SAT and ACT during regular school hours
 - Covering all parts of the exam fees
 - Increasing access to honors and AP courses
-- Increasing access to the PSAT
+- Increasing access to the PSAT and preparatory courses
 
 These suggestions can help to increase participation rates and also mean total scores. Offering the SAT and ACT during regular school hours will increase the rates of participation. Covering all part of the exam fees will also aid in increasing the rates of participation.
 
-Increasing access to honors and AP courses will aid in the increase of the mean total scores. The earlier that students can get into higher level classes the better. This will prepare them for these types of tests. Increasing access to the PSAT and school offered prepatory classes will also help to increase the mean toal scores. 
+Increasing access to honors and AP courses will aid in the increase of the mean total scores. The earlier that students can get into higher level classes the better. This will prepare them for these types of tests. Increasing access to the PSAT and school offered preparatory classes will also help to increase the mean toal scores. 
