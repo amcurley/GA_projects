@@ -79,9 +79,11 @@ We can see it look like more of the Democrat states prefer the SAT and the Democ
 In the map to the left the blue states indicate where the ACT is free to take. In the map to the right the yellow and orange states indicate where the ACT is mandatory to take.
 
 
-<img src="free_mandatory" width="750"/> 
+<img src="free_mandatory.png" width="750"/> 
 
+Just because a state with a higher participation is in a Rebublican state or Democrat state does not mean that participation rate is caused because of the political environment in that state. 
 
+Comparing the average ACT participation rates for 2017, 2018, and 2019 to these maps you can see a lot of crossover with middle and southern states that have high particpation rates, free tests, and state mandation. 
 
 ---
 
