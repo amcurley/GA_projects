@@ -33,16 +33,11 @@ After cleaning my data, I had a couple of primary findings that stood out to me.
 
 ### Selection Bias
 
-After cleaning my data, I had a couple of primary findings that stood out to me.
-
-- Colorado had a 70 % decrease in act participation rates from 2017 to 2018 and an 89% increase in SAT participation rates from 2017 to 2018. This is because Colorado instituted a state mandation for the SAT instead of the ACT. Requiring all students to take the sat.
-- Illinois had a 90% increase in SAT participation rates from 2017 to 2018. This is because thet also instituted a state mandation for the SAT requiring all students to take the SAT test.
-- Middle states and southern states are predominantly ACT focused meanwhile Eastern and Western states are predominantly SAT focused.
-- There is an inverse relationship between participation rates and mean scores.
+While analyzing my data I wanted to see the correlation between certain values and one of them was the participation rate and the total mean scores.  Schools that tend to have lower participation rates tend to have higher test scores. Why is this?
 
 <img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
 
-
+This is because the low percent of people who participate in these test are more motivated to do well on these tests than people who are forced to take these test in other states.
 
 
 
