@@ -2,7 +2,13 @@
 
 ### Overview
 
-While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest. 
+While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest.
+
+### Executive Summary
+
+While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest.
+
+- [Data Issues](###Data%Issues)
 
 ---
 
@@ -100,11 +106,7 @@ If states would like a guaranteed increase in participation rate for a given sta
 However, that route is not possible to take for every state.
 
 Recommendations for states who do not have a mandation:
-- Offering the SAT and ACT during regular school hours
-- Covering all parts of the exam fees
-- Increasing access to honors and AP courses
-- Increasing access to the PSAT and preparatory courses
-
-These suggestions can help to increase participation rates and also mean total scores. Offering the SAT and ACT during regular school hours will increase the rates of participation. Covering all part of the exam fees will also aid in increasing the rates of participation.
-
-Increasing access to honors and AP courses will aid in the increase of the mean total scores. The earlier that students can get into higher level classes the better. This will prepare them for these types of tests. Increasing access to the PSAT and school offered preparatory classes will also help to increase the mean toal scores. 
+- **First**, states could offer the SAT / ACT during school hours. This makes it so the students do not have to schedule it themselves and make accomadtions for going to the test. Which both could be big reasons why students do not take the tests. 
+- **Second**, states should cover all parts of the exam fees. For students who get free lunches and free resources it is unjust to make them pay upwards of $50+ to take one of these exams and prepare for the exam. Not covering all the fees could also play a role in students not being able to actually take the test.
+- **Third**, increasing access to honors and AP courses. Students who take these classes are far more ready for the SAT and ACT tests. Increasing access to these test will aid in increasing participation while also increasing mean total scores.
+- **Fourth**, increasing access to PSAT/NMSQT. In my school we had to pay for this course and had to stay after school for a few hours a week which is not possible for some students. Increasing access to the PSAT/NMSQT will lead to a higher participation rate and a higher mean total score.
