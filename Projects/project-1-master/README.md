@@ -18,7 +18,8 @@ While analyzing the 2017, 2018, and 2019 data I came across what looks like a po
 
 ---
 
-### Data Issues
+### [Data Issues](###Data%Issues)
+
 
 Before I started analyzing the data there were multiple data issues I encountered. 
 
