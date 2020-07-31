@@ -1,183 +1,110 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Standardized Testing, Statistical Summaries and Inference
+# Project 1: Do Politics Play a Role in SAT and ACT Participation Rates?
 
 ### Overview
 
-Our first module in DSI covers:
-- basic statistics (distributions, confidence intervals, hypothesis testing)
-- many Python programming concepts
-- programmatically interacting with files and directories
-- visualizations
-- EDA
-- working with Jupyter notebooks for development and reporting
-
-You might wonder if you're ready to start doing data science. While you still have **tons** to learn, there are many aspects of the data science process that you're ready to tackle. Project 1 aims to allow you to practice and demonstrate these skills.
-
-For our first project, we're going to take a look at aggregate SAT and ACT scores and participation rates from each state in the United States. We'll seek to identify trends in the data and combine our data analysis with outside research to identify likely factors influencing participation rates and scores in various states.
-
-Generally speaking, you will be asked to come up with a data science problem. Here's a specific prompt that should help you craft this statement:
-> The new format for the SAT was released in March 2016. As an employee of the College Board - the organization that administers the SAT - you are a part of a team that tracks statewide participation and recommends where money is best spent to improve SAT participation rates. Your presentation and report should be geared toward **non-technical** executives with the College Board and you will use the provided data and outside research to make recommendations about how the College Board might work to increase the participation rate in a **state of your choice**.
+While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest. 
 
 ---
 
-### Datasets
+### Data Issues
 
-#### Provided Data
+Before I started analyzing the data there were multiple data issues I encountered. 
 
-For this project, you'll have six provided datasets:
+- All of the 'Participation' columns were objects instead of floats.
+- Maryland in the 2017 SAT dataset the column 'math_sat' needed to be changed from 52 to 524.
+- Maryland in the 2017 ACT dataset the column 'science_act' needed to be changed 2.3 from 23.2.
+- Wyoming in the 2017 ACT dataset the column 'composite' needed to be changed 20.2x from 20.2.
+- In the 2017 dataset there was an extra row that needed to be dropped.
+- In the 2018 ACT dataset there was an extra Maine row that needed to be dropped.
+- In the 2019 SAT dataset there were two extra rows that needed to be dropped they were 'Puerto Rico' and 'Virgin Islands'
+- In the 2019 ACT dataset the last row needed to be dropped to match the 2019 SAT dataset
+- In the final dataset Florida's participation rate in 2017 is 83% then in 2018 it is 56% then in 2019 it is 100%. However in a report from college board Florida, in 2018 had a 97% participation rate. 
 
-- [2017 SAT Scores](./data/sat_2017.csv)
-- [2017 ACT Scores](./data/act_2017.csv)
-- [2018 SAT Scores](./data/sat_2018.csv)
-- [2018 ACT Scores](./data/act_2018.csv)
-- [2019 SAT Scores](./data/sat_2019.csv)
-- [2019 ACT Scores](./data/act_2019.csv)
-
-These data give average SAT and ACT scores by state, as well as participation rates for the classes of 2017, 2018, and 2019.
-
-You can see the sources for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/) and [here](https://blog.prepscholar.com/average-sat-scores-by-state-most-recent), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
-
-#### Additional Data
-(_This data is for your reference only. It is not needed to complete the project. You are required to include all of the above csv data._)
-
-2018 and 2019 state-by-state average results and participation for the SAT are available in PDF reports [here](https://reports.collegeboard.org/sat-suite-program-results/state-results). 2018 ACT state-by-state mean composite scores and participation rates are [here](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf) and 2019 data can be found [here](https://www.act.org/content/dam/act/secured/documents/cccr-2019/Average-Scores-by-State.pdf).
-
-**This data has been compiled into CSV files which are also included in the *data* directory of this repo**
+After resolving these issues I merged all of the dataframes together making a final and complete overview of all of the given data.
 
 ---
 
-### Deliverables
+### Primary Findings
 
-All of your projects will comprise of a written technical report and a presentation. As we continue in the course, your technical report will grow in complexity, but for this initial project it will comprise:
-- A Jupyter notebook that describes your data with visualizations & statistical analysis.
-- A README markdown file the provides an introduction to and overview of your project.
-- Your presentation slideshow rendered as a .pdf file.
-**NOTE**: Your entire Github repository will be evaluated as your technical report. Make sure that your files and directories are named appropriately, that all necessary files are included, and that no unnecessary or incomplete files are included.
+After cleaning my data, I had a couple of primary findings that stood out to me.
 
-For your first presentation, you'll be presenting to a **non-technical** audience. You should prepare a slideshow with appropriately scaled visuals to complement a compelling narrative. **Presentation duration will differ by market, so check with your local instructor.**
-
----
-
-### Technical Report Starter Code
-
-Future projects will require you to decide on the entire structure of your technical report. Here, we provide you with [starter code](./code/starter-code.ipynb) in a Jupyter notebook that will help to guide your data exploration and analysis. **If you choose to edit the core structure of this notebook, make sure you don't exclude any of the requested operations**.
+- Colorado had a 70 % decrease in act participation rates from 2017 to 2018 and an 89% increase in SAT participation rates from 2017 to 2018. This is because Colorado instituted a state mandation for the SAT instead of the ACT. Requiring all students to take the sat.
+- Illinois had a 90% increase in SAT participation rates from 2017 to 2018. This is because thet also instituted a state mandation for the SAT requiring all students to take the SAT test.
+- Middle states and southern states are predominantly ACT focused meanwhile Eastern and Western states are predominantly SAT focused.
+- There is an inverse relationship between participation rates and mean scores.
 
 ---
 
-### Style Guide and Suggested Resources
+### Test Taking Bias
 
-[Tim Dwyer](https://www.linkedin.com/in/jtimdwyer/) (former DSI student and TA) put together [this style guide](https://git.generalassemb.ly/DSIR-720/style-guide). Some recommendations are geared toward future projects (which will include modeling and span multiple notebooks), but generally these are great recommendations.
+While analyzing my data I wanted to see the correlation between certain values and one of them was the participation rate and the total mean scores.  Schools that tend to have lower participation rates tend to have higher test scores. Why is this?
 
-Here's a link on [how to give a good lightning talk](https://www.semrush.com/blog/16-ways-to-prepare-for-a-lightning-talk/), which provides some good recommendations for short presentations.
+<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
 
-[Here's a great summary](https://towardsdatascience.com/storytelling-with-data-a-data-visualization-guide-for-business-professionals-97d50512b407) of the main points of the book _Storytelling with Data_, which I can't recommend enough. [Here's a blog post](http://www.storytellingwithdata.com/blog/2017/8/9/my-guiding-principles) by the author about his guiding principles for visualizations.
-
----
-
-### Submission
-
-**Your slides must be ready for presentation by the beginning of class on July 31.**
-
-**Materials must be submitted on Google Classroom by EOD (end of day) on July 31.**
-
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
-
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis (renamed to describe your project)
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
+This is because the low percent of people who participate in these test are more motivated to do well on these tests than people who are forced to take these test in other states.
 
 ---
 
-### Presentation Structure
+### Average ACT Participation Rate for 2017, 2018, 2019
 
-- **Must be within 10 minutes. Aim for ~7 minutes to allow ~3 minutes for Q&A.**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to non-technical executives with the College Board (the organization that administers the SATs).
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
+As seen on the left there is a divergent choropleth plot that displays the average ACT participation rate for 2017, 2018, and 2019. The red meaning that participation rate is closer to 100% and the blue meaning participation rate closer to 0%. 
 
-Be sure to rehearse and time your presentation before class.
+On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 presidental election. 
+
+<img src="act_politics.png" width="750"/> 
+
+
+We can see it look like more of the Rebublican states prefer the ACT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
+
+- Link to the tableau map: https://public.tableau.com/profile/aidan.curle#!/vizhome/DivergentChloropethMapfortheAverageSATParticipationacross20172018and2019/Sheet1?publish=yes
 
 ---
 
-### Rubric
-Your instructors and IAs will evaluate your project (for the most part) using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
+### Average SAT Participation Rate for 2017, 2018, 2019
 
-**Scores will be out of 21 points based on the 7 items in the rubric.** <br>
-*3 points per section*<br>
+As seen on the left there is a divergent choropleth plot that displays the average SAT participation rate for 2017, 2018, and 2019. This time red meaning that participation rate is closer to 0% and the blue meaning participation rate closer to 100%. 
 
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
+On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 presidental election. 
 
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
+<img src="sat_politics.png" width="750"/> 
 
-**Clarity of Message**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the project?
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
 
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Does the student demonstrate mastery masking in Pandas?
-- Does the student demonstrate mastery sorting in Pandas?
+We can see it look like more of the Democrat states prefer the SAT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
 
-**Data Cleaning and EDA**
-- Does the student fix data entry issues?
-- Are data appropriately labeled?
-- Are data appropriately typed?
-- Are datasets combined correctly?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
+- Link to the tableau map: https://public.tableau.com/profile/aidan.curle#!/vizhome/DivergentChloropethMapfortheAverageSATParticipationRateacross20172018and2019/Sheet2?publish=yes
 
-**Visualizations**
-- Are the requested visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
 
-**Research and Conceptual Understanding**
-- Were useful insights gathered from outside sources?
-- Are sources clearly identified?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
+---
 
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
+# So, Does Politics Play a Role in SAT and ACT Participation Rates?
 
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
 
-### REMEMBER:
+### Not Necessarily
 
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+In the map to the left the blue states indicate where the ACT is free to take. In the map to the right the yellow and orange states indicate where the ACT is mandatory to take.
+
+
+<img src="free_mantadory.png" width="750"/> 
+
+
+Just because a state with a higher participation is in a Rebublican state or Democrat state does not mean that participation rate is caused because of the political environment in that state. 
+
+Comparing the average ACT participation rates for 2017, 2018, and 2019 to these maps you can see a lot of crossover with middle and southern states that have high particpation rates, free tests, and state mandation. 
+
+---
+
+### Conclusions & Recommendations
+
+If states would like a guaranteed increase in participation rate for a given state I would recommend offering the test for free and making it mandated in that specific state. This is why there is such a high percentage of people in the southern and middle states who take the ACT instead of the SAT. 
+
+However, that route is not possible to take for every state.
+
+Recommendations for states who do not have a mandation:
+- Offering the SAT and ACT during regular school hours
+- Covering all parts of the exam fees
+- Increasing access to honors and AP courses
+- Increasing access to the PSAT and preparatory courses
+
+These suggestions can help to increase participation rates and also mean total scores. Offering the SAT and ACT during regular school hours will increase the rates of participation. Covering all part of the exam fees will also aid in increasing the rates of participation.
+
+Increasing access to honors and AP courses will aid in the increase of the mean total scores. The earlier that students can get into higher level classes the better. This will prepare them for these types of tests. Increasing access to the PSAT and school offered preparatory classes will also help to increase the mean toal scores. 
