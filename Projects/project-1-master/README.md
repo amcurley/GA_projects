@@ -9,6 +9,12 @@ While analyzing the 2017, 2018, and 2019 data I came across what looks like a po
 While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest.
 
 - [Data Issues](###Data%Issues)
+- [Primary Findings](###Primary%Findings)
+- [Test Taking Bias](###Test%Taking%Bias)
+- [Average ACT Participation Rate for 2017, 2018, 2019](###Average%ACT%Participation%Rate%for%2017,%2018,%2019)
+- [Average SAT Participation Rate for 2017, 2018, 2019](###Average%SAT%Participation%Rate%for%2017,%2018,%2019)
+- [So, Does Politics Play a Role in SAT and ACT Participation Rates?](###So,%Does%Politics%Play%a%Role%in%SAT%and%ACT%Participation%Rates?)
+- [Conclusions & Recommendations](###Conclusions%&%Recommendations)
 
 ---
 
