@@ -31,13 +31,41 @@ After cleaning my data, I had a couple of primary findings that stood out to me.
 - Middle states and southern states are predominantly ACT focused meanwhile Eastern and Western states are predominantly SAT focused.
 - There is an inverse relationship between participation rates and mean scores.
 
-### Selection Bias
+### Test Taking Bias
 
 While analyzing my data I wanted to see the correlation between certain values and one of them was the participation rate and the total mean scores.  Schools that tend to have lower participation rates tend to have higher test scores. Why is this?
 
-<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
+<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> O
 
 This is because the low percent of people who participate in these test are more motivated to do well on these tests than people who are forced to take these test in other states.
+
+---
+
+### Average ACT Participation Rate for 2017, 2018, 2019
+
+As seen on the left there is a divergent choropleth plot that displays the average ACT participation rate for 2017, 2018, and 2019. The red meaning that participation rate is closer to 100% and the blue meaning participation rate closer to 0%. 
+
+On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 presidental election. 
+
+<img src="act_politics.png" width="750"/> O
+
+
+We can see it look like more of the Rebublican states prefer the ACT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
+
+### Average SAT Participation Rate for 2017, 2018, 2019
+
+As seen on the left there is a divergent choropleth plot that displays the average SAT participation rate for 2017, 2018, and 2019. This time red meaning that participation rate is closer to 0% and the blue meaning participation rate closer to 100%. 
+
+On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 presidental election. 
+
+<img src="sat_politics.png" width="750"/> O
+
+
+We can see it look like more of the Democrat states prefer the SAT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
+
+
+
+
 
 
 
