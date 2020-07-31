@@ -6,7 +6,10 @@ While analyzing the 2017, 2018, and 2019 data I came across what looks like a po
 
 ### Executive Summary
 
-While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest.
+In this project I chose the task of finding out if politics play a role in SAT and ACT participation rates. Before I was able to analyze the data there were a few data issues that needed to be resolved. After using common data cleaning methods I merged all three years into a final dataframe. After cleaning my data I had a couple of primary findings that stood out to me. Some of these were Colorado had a 70 % decrease in act participation rates from 2017 to 2018 and an 89% increase in SAT participation rates from 2017 to 2018 and Illinois had a 90% increase in SAT participation rates from 2017 to 2018. Two other interesting findings I found were that middle states and southern states are predominantly ACT focused meanwhile Eastern and Western states are predominantly SAT focused and there is an inverse relationship between participation rates and mean scores.
+
+When comparing the average ACT and SAT participation rates for 2017, 2018, and 2019 to the political map it showed a very intersting correlaton. A majority of Republican states had a very high ACT participation for 2017, 2018, and 2019 meanwhile a majority of Democrat states had a very high SAT participation rate for 2017, 2018, 2019. So, this begs the question do politics play a role in SAT and ACT particiaption rates?
+
 
 ### Table of Contents
 
@@ -123,6 +126,8 @@ Recommendations for states who do not have a mandation:
 ---
 
 ### Citations
+
+Also, credit to James Pecore, Haley Taft, Chris Johnson, Lydia Kajeckas, David Lee, Eric Heidbreder for help throughout this project.
 
 - https://co.chalkbeat.org/2015/12/23/21092477/goodbye-act-hello-sat-a-significant-change-for-colorado-high-schoolers
 - https://www.testive.com/colorado-sat-change-2017/
