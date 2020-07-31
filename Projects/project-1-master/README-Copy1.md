@@ -40,7 +40,7 @@ After cleaning my data, I had a couple of primary findings that stood out to me.
 - Middle states and southern states are predominantly ACT focused meanwhile Eastern and Western states are predominantly SAT focused.
 - There is an inverse relationship between participation rates and mean scores.
 
-![Screen Shot 2020-07-31 at 10.39.59 AM.png](/Users/aidancurley/Documents/dsir/Submissions/Projects/project-1-master/Assets/Screen Shot 2020-07-31 at 10.39.59 AM.png)
+<img src="Screen Shot 2020-07-31 at 10.39.59 AM.png" width="750"/> 
 
 
 
