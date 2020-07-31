@@ -20,7 +20,7 @@ When comparing the average ACT and SAT participation rates for 2017, 2018, and 2
 - [Average SAT Participation Rate for 2017, 2018, 2019](###Average%SAT%Participation%Rate%for%2017,%2018,%2019)
 - [So, Does Politics Play a Role in SAT and ACT Participation Rates?](###So,%Does%Politics%Play%a%Role%in%SAT%and%ACT%Participation%Rates?)
 - [Conclusions & Recommendations](###Conclusions%&%Recommendations)
-- [Conclusions & Recommendations](###Conclusions%&%Recommendations)
+- [Citations](###Citations)
 ---
 
 ### Data Issues <a name="###Data%Issues"></a>
