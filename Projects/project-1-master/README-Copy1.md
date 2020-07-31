@@ -22,6 +22,8 @@ Before I started analyzing the data there were multiple data issues I encountere
 
 After resolving these issues I merged all of the dataframes together making a final and complete overview of all of the given data.
 
+---
+
 ### Primary Findings
 
 After cleaning my data, I had a couple of primary findings that stood out to me.
@@ -30,6 +32,8 @@ After cleaning my data, I had a couple of primary findings that stood out to me.
 - Illinois had a 90% increase in SAT participation rates from 2017 to 2018. This is because thet also instituted a state mandation for the SAT requiring all students to take the SAT test.
 - Middle states and southern states are predominantly ACT focused meanwhile Eastern and Western states are predominantly SAT focused.
 - There is an inverse relationship between participation rates and mean scores.
+
+---
 
 ### Test Taking Bias
 
@@ -52,6 +56,8 @@ On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 p
 
 We can see it look like more of the Rebublican states prefer the ACT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
 
+---
+
 ### Average SAT Participation Rate for 2017, 2018, 2019
 
 As seen on the left there is a divergent choropleth plot that displays the average SAT participation rate for 2017, 2018, and 2019. This time red meaning that participation rate is closer to 0% and the blue meaning participation rate closer to 100%. 
@@ -64,21 +70,14 @@ On the right is a map of the summary results of the 2004, 2008, 2012, and 2016 p
 We can see it look like more of the Democrat states prefer the SAT and the Democrat states do not. However, based on the test taking bias the states where they are closer to 0% are averaging higher mean total scores than states closer to 100%.
 
 
+# So, Does Politics Play a Role in SAT and ACT Participation Rates?
 
 
 
 
 
-You can see the sources for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/) and [here](https://blog.prepscholar.com/average-sat-scores-by-state-most-recent), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
 
-#### Additional Data
-(_This data is for your reference only. It is not needed to complete the project. You are required to include all of the above csv data._)
 
-2018 and 2019 state-by-state average results and participation for the SAT are available in PDF reports [here](https://reports.collegeboard.org/sat-suite-program-results/state-results). 2018 ACT state-by-state mean composite scores and participation rates are [here](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf) and 2019 data can be found [here](https://www.act.org/content/dam/act/secured/documents/cccr-2019/Average-Scores-by-State.pdf).
-
-**This data has been compiled into CSV files which are also included in the *data* directory of this repo**
-
----
 
 ### Deliverables
 
