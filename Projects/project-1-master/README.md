@@ -8,6 +8,8 @@ While analyzing the 2017, 2018, and 2019 data I came across what looks like a po
 
 While analyzing the 2017, 2018, and 2019 data I came across what looks like a possible correlation between Politics and ACT and SAT participation rates. Republican states tend to have a higher ACT participation rate while Democrat states tend to have a higher SAT participation rate. Do Republican states have more state mandation? Are states providing the tests for free? These are some of the questions that sparked my interest.
 
+### Table of Contents
+
 - [Data Issues](###Data%Issues)
 - [Primary Findings](###Primary%Findings)
 - [Test Taking Bias](###Test%Taking%Bias)
@@ -15,7 +17,7 @@ While analyzing the 2017, 2018, and 2019 data I came across what looks like a po
 - [Average SAT Participation Rate for 2017, 2018, 2019](###Average%SAT%Participation%Rate%for%2017,%2018,%2019)
 - [So, Does Politics Play a Role in SAT and ACT Participation Rates?](###So,%Does%Politics%Play%a%Role%in%SAT%and%ACT%Participation%Rates?)
 - [Conclusions & Recommendations](###Conclusions%&%Recommendations)
-
+- [Conclusions & Recommendations](###Conclusions%&%Recommendations)
 ---
 
 ### Data Issues <a name="###Data%Issues"></a>
@@ -117,3 +119,18 @@ Recommendations for states who do not have a mandation:
 - **Second**, states should cover all parts of the exam fees. For students who get free lunches and free resources it is unjust to make them pay upwards of $50+ to take one of these exams and prepare for the exam. Not covering all the fees could also play a role in students not being able to actually take the test.
 - **Third**, increasing access to honors and AP courses. Students who take these classes are far more ready for the SAT and ACT tests. Increasing access to these test will aid in increasing participation while also increasing mean total scores.
 - **Fourth**, increasing access to PSAT/NMSQT. In my school we had to pay for this course and had to stay after school for a few hours a week which is not possible for some students. Increasing access to the PSAT/NMSQT will lead to a higher participation rate and a higher mean total score.
+
+---
+
+### Citations
+
+- https://co.chalkbeat.org/2015/12/23/21092477/goodbye-act-hello-sat-a-significant-change-for-colorado-high-schoolers
+- https://www.testive.com/colorado-sat-change-2017/
+- https://reports.collegeboard.org/pdf/2018-florida-sat-suite-assessments-annual-report.pdf
+- https://www.testive.com/illinois/
+- https://seaborn.pydata.org/examples/many_pairwise_correlations.html
+- https://en.wikipedia.org/wiki/Red_states_and_blue_states
+- https://www.cnn.com/2014/03/05/living/sat-test-changes-schools/index.html
+- https://magoosh.com/hs/act/2017/states-that-require-the-act-or-sat/
+- https://magoosh.com/hs/act/2017/states-provide-act-free/
+- https://www.hanoverresearch.com/media/Best-Practices-to-Increase-SAT-Participation-1.pdf
