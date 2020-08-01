@@ -134,6 +134,8 @@ Also, credit to James Pecore, Haley Taft, Chris Johnson, Lydia Kajeckas, David L
 - https://reports.collegeboard.org/pdf/2018-florida-sat-suite-assessments-annual-report.pdf
 - https://www.testive.com/illinois/
 - https://seaborn.pydata.org/examples/many_pairwise_correlations.html
+- https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps
+- https://github.com/ebmdatalab/openprescribing/issues/347
 - https://en.wikipedia.org/wiki/Red_states_and_blue_states
 - https://www.cnn.com/2014/03/05/living/sat-test-changes-schools/index.html
 - https://magoosh.com/hs/act/2017/states-that-require-the-act-or-sat/
