@@ -1,49 +1,47 @@
-# Project 2 - Ames Housing Data and Kaggle Challenge
+# Regression Model to Predict Sale Price of a Home
 
-Welcome to Project 2! It's time to start modeling.
+Aidan Curley | US-DSIR-720 | 08.14.2020
 
-**Primary Learning Objectives:**
-1. Creating and iteratively refining a regression model
-2. Using [Kaggle](https://www.kaggle.com/) to practice the modeling process
-3. Providing business insights through reporting and presentation.
+## Problem Statement  
 
-You are tasked with creating a regression model based on the Ames Housing Dataset. This model will predict the price of a house at sale.
+Being the lead data scientist at GA & Associates Realty I was given the task of creating a model that will shorten our timeframe for evaluating a potential real estate investment property. This model should inform us on the features that have an effect on price when we go to buy the house and when we go to sell the house. Our model should be able to predict the price within \$30,000 since this will give us room to negotiate, renovate, and eventually resell the property. 
 
-The Ames Housing Dataset is an exceptionally detailed and robust dataset with over 70 columns of different features relating to houses.
+I will use the Ames Iowa dataset to build a baseline regression model to predict the sale price of a house in order to evaluate if that property is a potential real estate investment.
 
-Secondly, we are hosting a competition on Kaggle to give you the opportunity to practice the following skills:
 
-- Refining models over time
-- Use of train-test split, cross-validation, and data with unknown values for the target to simulate the modeling process
-- The use of Kaggle as a place to practice data science
+## Project Directory
+    
+```
+project_2-master   
+|__ code       
+|   |__ 01_continous_cleaning.ipynb  
+|   |__ 02_discrete_cleaning.ipynb  
+|   |__ 03_ordinal_cleaning.ipynb  
+|   |__ 04_nominal_cleaning.ipynb  
+|   |__ 05_function_cleaning.ipynb  
+|   |__ 06_model_submission.ipynb 
+|__ data  
+|   |__ continous_test.csv  
+|   |__ continous_train.csv  
+|   |__ discrete_test.csv  
+|   |__ discrete_train.csv  
+|   |__ merged_test.csv  
+|   |__ merged_train.csv  
+|   |__ new_submission.csv  
+|   |__ ordinal_test.csv  
+|   |__ ordinal_train.csv  
+|   |__ ridge_submission.csv   
+|   |__ test.csv  
+|   |__ train.csv  
+|__ capstone_presentation.pdf  
+|__ README.md  
+```
 
-As always, you will be submitting a technical report and a presentation. **You may find that the best model for Kaggle is not the best model to address your data science problem.**
+## Executive Summary
 
-## Set-up
+I was given a dataset of Ames Iowa houses with a total of 80 columns for features of the houses and one column for 'SalePrice.' There were four different types of data: nominal, ordinal, continous, and discrete. I went through all of the 80 columns and picked the columns in those four categories that can best be replicated for future data. There were features in this dataset that could have impacted the sale price for this specifc city however would not have been translated nicely if later down the line we wanted to input data from different cities across the United States.   
 
-Before you begin working on this project, please do the following:
-
-1. Sign up for an account on [Kaggle](https://www.kaggle.com/)
-2. **IMPORTANT**: Click this link ([Regression Challenge Sign Up](https://www.kaggle.com/t/ef2cf5ae165a4918b68bd126c0e231e0)) to **join** the competition (otherwise you will not be able to make submissions!)
-3. Review the material on the [DSIR-720 Regression Challenge](https://www.kaggle.com/c/dsir-720-project-2-regression-challenge/overview)
-4. Review the [data description](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
-
-## The Modeling Process
-
-1. The train dataset has all of the columns that you will need to generate and refine your models. The test dataset has all of those columns except for the target that you are trying to predict in your Regression model.
-2. Generate your regression model using the training data. We expect that within this process, you'll be making use of:
-    - train-test split
-    - cross-validation / grid searching for hyperparameters
-    - strong exploratory data analysis to question correlation and relationship across predictive variables
-    - code that reproducibly and consistently applies feature transformation (such as the preprocessing library)
-3. Predict the values for your target column in the test dataset and submit your predictions to Kaggle to see how your model does against unknown data.
-    - **Note**: Kaggle expects to see your submissions in a specific format. Check the challenge's page to make sure you are formatting your CSVs correctly!
-    - **You are limited to models you've learned in class**. In other words, you cannot use XGBoost, Neural Networks or any other advanced model for this project.
-4. Evaluate your models!
-    - consider your evaluation metrics
-    - consider your baseline score
-    - how can your model be used for inference?
-    - why do you believe your model will generalize to new data?
+With these specific features that I chose for the regression model I hope that this model can be replicated and used as a tool to evaluate a real estate invesment deal. When new deals come across the table we can run them through this model and see if the price for that house seems satisfactory for an investment or not.  
 
 ## Submission
 
