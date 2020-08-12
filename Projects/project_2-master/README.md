@@ -6,7 +6,12 @@ Aidan Curley | US-DSIR-720 | 08.14.2020
 
 Being the lead data scientist at GA & Associates Realty I was given the task of creating a model that will shorten our timeframe for evaluating a potential real estate investment property. This model should inform us on the features that have an effect on price when we go to buy the house and when we go to sell the house. Our model should be able to predict the price within \$30,000 since this will give us room to negotiate, renovate, and eventually resell the property. 
 
-I will use the Ames Iowa dataset to build a baseline regression model to predict the sale price of a house in order to evaluate if that property is a potential real estate investment.
+I will use the Ames Iowa housing dataset to build a baseline regression model to predict the sale price of a house in order to evaluate if that property is a potential real estate investment.
+
+## Table of Content
+
+Project Directory  
+Executive Summary  
 
 
 ## Project Directory
@@ -41,7 +46,7 @@ project_2-master
 
 I was given a dataset of Ames Iowa houses with a total of 80 columns for features of the houses and one column for 'SalePrice.' There were four different types of data: nominal, ordinal, continous, and discrete. I went through all of the 80 columns and picked the columns in those four categories that can best be replicated for future data. There were features in this dataset that could have impacted the sale price for this specifc city however would not have been translated nicely if later down the line we wanted to input data from different cities across the United States.   
 
-With these specific features that I chose for the regression model I hope that this model can be replicated and used as a tool to evaluate a real estate invesment deal. When new deals come across the table we can run them through this model and see if the price for that house seems satisfactory for an investment or not.  
+With these specific features that I chose for the regression model I hope that this model can be replicated and used as a tool to evaluate a real estate invesment deal. When new deals come across the table we can run them through this model and see if the price for that house seems satisfactory for an investment or not. When we are looking to sell a property we can also run that property though this model and predict what we can potentially get from the house.
 
 ## Submission
 
