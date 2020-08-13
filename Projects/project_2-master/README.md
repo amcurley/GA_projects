@@ -68,16 +68,17 @@ I wanted to focus on features that most real estate agents can easily find out f
 
 These features will allow us to deploy models very quickly and allow us to replicate on future markets. This was very important to selecting these features. After picking these features I also wanted to add the relationship between some of these features to our feature list as well. I wanted to emphasize houses that had a relationship with Gr Liv Area & Total Bsmt SF, Overall Qual & Exter Qual, Overall Qual & Gr Liv Area, and Gr Liv Area & Garage Area. Although these features could have added multicollinearity they are important relationships that I believe could impact the overall sale price of home.  
 
----
 
-## Modelling Process
+## Modelling Process  
 
 The modelling process had multiple steps.      
 
 The first step in my modelling process was finding out my baseline score with my cleaned dataset with my selected features. With my model the RMSE (Root Mean Square Error) to beat was 80039.93 for the training dataset and 77354.33 for the testing dataset. 
 
 
-After evaluating the baseline score I then moved onto predicting the best score I could with my chosen features.
+After evaluating the baseline score I then moved onto predicting the best score I could with my chosen features. I instantiated a new linear regression model and passed my features into this models train test split. This model performed expontentially better than the baseline model. The training RMSE was 28091.21 and the testing RMSE was 28408.52. 
+
+After I did this model I instantiated another model however this was with using standard scaler and ridge regression. I wanted to see if scaling my features and doing ridge regression would improve my scores. This time I used R2 to score this model. The R2 for this model was .87 on train in train test split and .87 on test in train test split. Comparing this to my model without scaled features for my R2 I got .88 on the train in train test split and .86 on the test in train test split. I did the same process with lasso regression and I achieved about the same R2 scores, I got .88 on the train in train test split and .87 on the test in train test split.
 
 
 
