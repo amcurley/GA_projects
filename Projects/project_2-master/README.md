@@ -72,7 +72,7 @@ These features will allow us to deploy models very quickly and allow us to repli
 
 ## Modelling Process
 
-The modelling process had multiple steps.   
+The modelling process had multiple steps.      
 
 The first step in my modelling process was finding out my baseline score with my cleaned dataset with my selected features. With my model the RMSE (Root Mean Square Error) to beat was 80039.93 for the training dataset and 77354.33 for the testing dataset. 
 
