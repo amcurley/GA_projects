@@ -69,6 +69,9 @@ I wanted to focus on features that most real estate agents can easily find out f
 These features will allow us to deploy models very quickly and allow us to replicate on future markets. This was very important to selecting these features. After picking these features I also wanted to add the relationship between some of these features to our feature list as well. I wanted to emphasize houses that had a relationship with Gr Liv Area & Total Bsmt SF, Overall Qual & Exter Qual, Overall Qual & Gr Liv Area, and Gr Liv Area & Garage Area. Although these features could have added multicollinearity they are important relationships that I believe could impact the overall sale price of home.  
 
 
+![](/Users/aidancurley/Documents/dsir/Submissions/Projects/project_2-master/assets/neighborhoodboxplot.png)
+
+
 ## Modelling Process  
 
 The modelling process had multiple steps.      
