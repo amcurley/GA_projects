@@ -4,7 +4,7 @@ Aidan Curley | US-DSIR-720 | 08.14.2020
 
 ## Problem Statement  
 
-Being the lead data scientist at GA & Associates Realty I was given the task of creating a model that will shorten our timeframe for evaluating a potential real estate investment property. This model should inform us on the features that have an effect on price when we go to buy the house and when we go to sell the house. Our model should be able to predict the price within \$30,000 since this will give us room to negotiate, renovate, and eventually resell the property. 
+Being the lead data scientist at Gold Swan Capital I was given the task of creating a model that will shorten our timeframe for evaluating a potential real estate investment property. This model should inform us on the features that have an effect on price when we go to buy the house and when we go to sell the house. Our model should be able to predict the price within \$30,000 since this will give us room to negotiate, renovate, and eventually resell the property. 
 
 I will use the Ames Iowa housing dataset to build a baseline regression model to predict the sale price of a house in order to evaluate if that property is a potential real estate investment.
 
@@ -130,5 +130,4 @@ Special thanks to David Lee, Eric Heidbreder, Lydia Kajeckas, Haley Taft, and Ch
 - https://stackoverflow.com/questions/35713093/how-can-i-compare-two-lists-in-python-and-return-not-matches/35713174
 - https://stackoverflow.com/questions/49188960/how-to-show-all-of-columns-name-on-pandas-dataframe/49189503
 
-
-
+![](./assets/goldswan.png)  
