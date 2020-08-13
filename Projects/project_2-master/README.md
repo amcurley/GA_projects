@@ -16,6 +16,7 @@ I will use the Ames Iowa housing dataset to build a baseline regression model to
 - [Modelling Process](#modellingprocess)
 - [Future Steps](#futuresteps)
 - [Conclusions & Recommendations](#c&r)
+- [Citations](#cite)
 
 
 <a name="projectdirectory"></a>
@@ -121,9 +122,13 @@ Use this model as a ballpark number in mind and then go research that specific p
 
 As I tweak and add to this model I hope to make it more accurate and replicatable to different markets. 
 
+<a name="cite"></a>
 ## Citations
 
-Special thanks to David Lee, Eric Heidbreder, Lydia Kajeckas, Haley Taft, Chris Johnson, and Noah Christiansen on certain parts of this project.
+Special thanks to David Lee, Eric Heidbreder, Lydia Kajeckas, Haley Taft, and Chris Johnson on certain parts of this project.
 
-- 
+- https://stackoverflow.com/questions/35713093/how-can-i-compare-two-lists-in-python-and-return-not-matches/35713174
+- https://stackoverflow.com/questions/49188960/how-to-show-all-of-columns-name-on-pandas-dataframe/49189503
+
+
 
