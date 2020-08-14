@@ -25,6 +25,7 @@ I will use the Ames Iowa housing dataset to build a baseline regression model to
 ```
 project_2-master
 |__ assets 
+|   |__ goldswan.png
 |   |__ neighborhoodboxplot.png
 |__ code       
 |   |__ 01_continous_cleaning.ipynb  
@@ -81,14 +82,14 @@ Only using one nominal feature was an interesting choice. I wanted to use as lit
 
 ![](./assets/neighborhoodboxplot.png)  
 
-As we can see in the boxplot above there are a lot of houses in that \\$100,000 to \\$200,000 range. We can also see that certain neighborhoods on average are way more expensive than other neighborhoods. This is something to rememeber and take into consideration when evaluating a potenital investment. Another interesting idea to take into consideration is why are there so many houses in this dataset in certain neighborhoods and not other neighborhoods? Why are people moving out? Why are people moving in? These are all follow up questions we will have to rememeber when evaluating a house. 
+As we can see in the boxplot above there are a lot of houses in that \$100,000 to \$200,000 range. We can also see that certain neighborhoods on average are way more expensive than other neighborhoods. This is something to rememeber and take into consideration when evaluating a potenital investment. Another interesting idea to take into consideration is why are there so many houses in this dataset in certain neighborhoods and not other neighborhoods? Why are people moving out? Why are people moving in? These are all follow up questions we will have to rememeber when evaluating a house. 
 
 <a name="modellingprocess"></a>
 ## Modelling Process  
 
 The modelling process had multiple steps.      
 
-The first step in my modelling process was finding out my baseline score with my cleaned dataset with my selected features. With my model the RMSE (Root Mean Square Error) to beat was 80039.93 for the training dataset and 77354.33 for the testing dataset. The RMSE in this case represent how off we are in terms of a dollar amount from the actual sale price. With this model we are \\$77,354.33 off the actual sale price of the home.
+The first step in my modelling process was finding out my baseline score with my cleaned dataset with my selected features. With my model the RMSE (Root Mean Square Error) to beat was 80039.93 for the training dataset and 77354.33 for the testing dataset. The RMSE in this case represent how off we are in terms of a dollar amount from the actual sale price. With this model we are \$77,354.33 off the actual sale price of the home.
 
 
 After evaluating the baseline score I then moved onto predicting the best score I could with my chosen features. I instantiated a new linear regression model and passed my features into this models train test split. This model performed expontentially better than the baseline model. The training RMSE was 28091.21 and the testing RMSE was 28408.52. 
@@ -98,7 +99,7 @@ After I did this model I instantiated another model however this was with using 
 <a name="futuresteps"></a>
 ## Future Steps
 
-As we move forward looking for potential investment properties this model will have to improve. Although it is satisfactory for getting an estimation on what we could buy/sell the house for it will need to improve. Especially with residential properties being under or over \\$30,000 is not the best. However, if we see a potential property that catches our eye this model can be extremely helpful. We can run the properties features through our model and evaluate what needs to get fixed. Such as improving the overall quality of house from a 4 to a 10 will increase our potential sale price. 
+As we move forward looking for potential investment properties this model will have to improve. Although it is satisfactory for getting an estimation on what we could buy/sell the house for it will need to improve. Especially with residential properties being under or over \$30,000 is not the best. However, if we see a potential property that catches our eye this model can be extremely helpful. We can run the properties features through our model and evaluate what needs to get fixed. Such as improving the overall quality of house from a 4 to a 10 will increase our potential sale price. 
 
 In the future we plan to tweak and add to this model as we expand to new markets. Performing this model on different markets will show us what else we need to add that we did not have in version 1.0. Possibly using a different machine learning model will produce a better RMSE than just a linear regression model. We will continously tweak and edit the code to make this model predict better and be more reproduceable to future datasets.
 
