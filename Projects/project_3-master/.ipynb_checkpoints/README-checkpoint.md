@@ -10,11 +10,10 @@ According to Reddit you can, “reach passionate and diverse communities organiz
 
 - [Project Directory](#projectdirectory)
 - [Executive Summary](#executivesummary)
-- [The Dataset](#dataset)
-- [Feature Selection](#featureselection)
+- [Data](#data)
 - [Modelling Process](#modellingprocess)
-- [Future Steps](#futuresteps)
 - [Conclusions & Recommendations](#c&r)
+- [Future Steps](#futuresteps)
 - [Citations](#cite)
 
 
@@ -48,28 +47,65 @@ So whats the solution to this problem? A way to reduce the likelihood of human e
 
 For this project I chose the two subreddits r/MachineLearning and r/artificial because these topics have a lot of overlapping content and words. I will use Natural Language Processing and a variety of classification machine learning models such as logistic regression, naive bayes, random forests, and an LSTM RNN to classify a post to either be in the r/MachineLearning subreddit or the r/artificial subreddit. We will evaluate each of these models based on their accuracy scores. I chose a handful of models to see how the accuracy score improves as model complexitiy increases. 
 
-Our best score was ___ which is awesome! With this accuracy score we are confident in moving forward with this project and moving on to the next steps. The next steps consist of creating this same process but for every subreddit on Reddit. For Reddit to be able to self classify the post as it is being written we will need a lot of data. In the future we plan to scrape Reddit and pull 2,000 posts from each subreddit. If we are able to pull 2,000 posts from every single subreddit we will have a total of 2.4 billion posts. However, according to Reddit there are only 138,000 active subreddits so if we only pull 2,000 posts from those subreddits we will have in total 276,000,000 posts to work with.
+My best accuracy score so far was 86.15%. With this accuracy score on two subreddits that are very similiar in topic I am confident in moving forward with this project and moving on to the next steps. The next steps consist of creating this same process but for every subreddit on Reddit. For Reddit to be able to self classify the post as it is being written we will need a lot of data. In the future we plan to scrape Reddit and pull 2,000 posts from each subreddit. If we are able to pull approximately 2,000 posts from every single subreddit we will have a total of 2.4 billion posts. However, according to Reddit there are only 138,000 active subreddits so if we only pull 2,000 posts from those subreddits we will have in total 276 million posts to work with. This feature will be an amazing add-on to Reddit for two main reason. This first reason is that users will have less trouble in deciding where to post their content since our program can give them recommendations where their post should go. Second, implementing this program can make sure that post are going in the right subreddits which would mean that advertising becomes more accurate, which means that advertisers are getting a better return on their ad spend. 
 
 
+<a name="data"></a>
+## Data 
 
-<a name="dataset"></a>
-## The Dataset 
+The data I am using from this project consists of a total of 31,299 posts from each subreddit which is 62,598 posts in total.  From these posts I only used the 'title'(the title of the post) and the 'selftext'(the content within the post) columns. I used the [pushshift api](https://github.com/pushshift/api) to scrape this data from reddit. For these two subreddits there were a couple cleaning steps that had to be addressed. In the 'selftext' column there were a lot of NaN values and removed and deleted posts. My way around these issue were replacing those values with a space so my models can still use that data. 
 
-The dataset I am using from this project consists of a total of 31,299 posts from each subreddit which is 62,598 posts in total. From these posts I only used the 'title'(the title of the post) and the 'selftext'(the content within the post) columns. I used the [pushshift api](https://github.com/pushshift/api) to scrape this data from reddit. 
+Replicating this process for future advancements is time consuming however very doable. Scraping the 276 million posts and gathering 2,000 posts from each subreddit would take approximately 24 hours using a mulit threading scraping process. The final file would be approximately be around 150 GB as well.
 
 
 <a name="modellingprocess"></a>
 ## Modeling Process  
 
-After cleaning our data we now move onto the modeling process. The modeling process has multiple steps
+After bringing in our data we move onto the modeling process.
 
-The modelling process had multiple steps.  
+After performing the common natural langugage processing tasks such as removing stop words, numbers, special characters and tokenizing the data we are finally able to model our data. The metric I am scoring the models on is accuracy. Before getting the accuracy for the more complex models I had to get the baseline accuracy score. This baseline score was 50% since I had perfectly balanced classes.
 
-In a natural language processing classification task there are a few steps we have to take before modeling. 
+I did one set of modeling for just the 'title' column and another set of modeling for the 'title' and 'selftext' columns together. I wanted to see if adding the 'selftext' column increased my model's accuracy, made it stay the same, or made the accuracy score decrease. 
 
-I pulled in 31,299 posts from each subreddit as a start. After I had all of my data I had to convert the data into 
+**Title Only Model & Accuracy:**
+- Simple Logisitic Regression had an accuracy score of 80.79% 
+- Logistic Regression with Gridsearch had an accuracy score of 80.97%
+- Naive Bayes with Gridsearch had an accuracy score of **86.15%**
+
+**Title and Selftext Model & Accuracy:**
+- Simple Logisitic Regression had an accuracy score of 80.46%
+- Logistic Regression with Gridsearch had an accuracy score of 80.09%
+- Naive Bayes with Gridsearch had an accuracy score of 82.43%
+
+**LSTM RNN**
+- I was able to achieve an accuracy score of 81.60%
 
 
+Since the model with the highest accuracy is the Gridseached Naive Bayes model with an accuracy score of 86.15% I will choose this model as my final model. 
+
+This is the confusion matrix for that model: 
+
+![](./assets/naive_bayes_gs_cm.png)  
+
+With this model we were able to achive a very good accuracy and a fairly low missclassification rate for how close these subreddits are to each other in terms of content and topics. Accuracy and missclassification rate are metrics that will be important to monitor in future advancements of this project.
+
+
+<a name="c&r"></a>
+## Conclusions & Recommendations 
+
+Since we verified that even with very close topics we can achieve an accuracy score of 86.15% I believe that this is enough evidence that this long term project is a viable and useful add-on to Reddit. 
+
+Here are a list of benefits from adding this tool:
+
+- Cleaner subreddits
+- More accurate advertising
+- Reduce the wordload for reddit moderators
+- Easier posting for users
+- Accumulating massive amounts of text data
+
+Although we got a pretty decent accuracy scores for these two subreddits it is important to remember that this model was only trained on only these two subreddits.
+
+As I tweak and add to this model I hope to make it more accurate and replicable to different markets. 
 
 <a name="futuresteps"></a>
 ## Future Steps
@@ -80,23 +116,6 @@ In the future we plan to tweak and add to this model as we expand to new markets
 
 Once we get a satisfactory replicable model we hope to add a section to our website that will make the process of predicting easier. This section on our website will have places to input the features we use to predict the sale price so we don't have to manually enter them into a csv file and run all of the notebooks again. This will be able to give you a prediction instantly. This feature will only be accessible by our team of investors.
 
-<a name="c&r"></a>
-## Conclusions & Recommendations 
-
-First of all this is not a model that should be used to predict and then simply buy the property based on this estimation, since there are many aspects of a house that cannot be accounted for by a model. 
-
-Depending on your specifc investment strategies these are some things to take into consideration before purchasing an investment property:
-
-- School District
-- Neighbors
-- Economic Climate
-- Supply and Demand 
-- Interest Rates
-- Area Demographics
-
-Use this model as a ballpark number in mind and then go research that specific property in more detail. If your strategy is a fix and flip you might search for properties with quality features less than 5 and focus on improving them to 8+. You can then predict if I raise this house's quality features how much does that raise the sale price of a house. If the numbers make sense then go research the property in more detail. If your strategy is to find tenants you might want to focus on different qualities that aren't in this model such as paint colors, quality of furniture, ease of access to public transportation, etc. 
-
-As I tweak and add to this model I hope to make it more accurate and replicable to different markets. 
 
 <a name="cite"></a>
 ## Citations
