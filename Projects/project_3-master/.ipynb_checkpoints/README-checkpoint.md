@@ -45,7 +45,7 @@ As Reddit continues to grow so does the chances of posting in the wrong subreddi
 
 So whats the solution to this problem? A way to reduce the likelihood of human error when selecting a subreddit is if Reddit had a recommendation system that as you are writing your reddit post it says with a certain amount of accuracy which subreddit that post should belong to. Implementing this could reduce the amount of posting in the wrong subreddit which could lead to cleaner subreddit's and potentially more targeted advertising within these subreddit's.   
 
-For this project I chose the two subreddits r/MachineLearning and r/artificial because these topics have a lot of overlapping content. Picking subreddit's that were similiar in content was important because if I will use Natural Language Processing and a variety of classification machine learning models such as logistic regression, naive bayes, random forests, and an LSTM RNN to classify a post to either be in the r/MachineLearning subreddit or the r/artificial subreddit. I will evaluate each of these models based on their accuracy scores. I chose a handful of models to see how the accuracy score improves as model complexitiy increases. 
+For this project I chose the two subreddits r/MachineLearning and r/artificial because these topics have a lot of overlapping content. Picking subreddit's that were similiar in content was important because if I will use Natural Language Processing and a variety of classification machine learning models such as logistic regression, naive bayes, and an LSTM RNN to classify a post to either be in the r/MachineLearning subreddit or the r/artificial subreddit. I will evaluate each of these models based on their accuracy scores. I chose a handful of models to see how the accuracy score improves as model complexitiy increases. 
 
 My best accuracy score so far was 86.15%. With this accuracy score on two subreddits that are very similiar in topic I am confident in moving forward with this project and moving on to the next steps. The next steps consist of creating this same process but for every subreddit on Reddit. 
 
@@ -87,13 +87,13 @@ Since the models did not improve from adding the 'selftext' columns I will not c
 **LSTM RNN**
 - I was able to achieve an accuracy score of 81.60%
 
-Since the model with the highest accuracy is the Gridseached Naive Bayes model with an accuracy score of 86.15%. I will choose this model as my final model. I plan to add a few more models to this project and continue tuning hyperparamter's.
+Since the model with the highest accuracy is the Gridseached Naive Bayes model with an accuracy score of 86.15%. I will choose this model as my final model.
 
 This is the confusion matrix for that model: 
 
 ![](./assets/naive_bayes_gs_cm.png)  
 
-With this model I was able to achive a very good accuracy and a fairly low missclassification rate for how close these subreddits are to each other in terms of content and topics. Accuracy and missclassification rate are metrics that will be important to monitor in future advancements of this project.
+With this model I was able to achive a very good accuracy and a fairly low missclassification rate for how close these subreddits are to each other in terms of content and topics. For future model iterations I would like to get the misclassifcation rate to below 10% but for how closely related these topics are it is satisfactory. Accuracy and missclassification rate are metrics that will be important to monitor in future advancements of this project. 
 
 
 <a name="c&r"></a>
@@ -118,10 +118,13 @@ To be able to self classify the post as it is being written I will need a lot of
 
 Once this data is collected I plan to develop a better version of my LSTM RNN so it can learn over time with all of that collected data. However, before trying to run a model on all of the data I will take 10 different subreddits and see if my model can predict with a satisfactory accuracy score. If this model cannot beat the baseline accuracy score we now will know that this project is not possible. If it does pass this score we can continue adding subreddits and scaling up the model.
 
-This feature will be an amazing add-on to Reddit for two main reason:  
-- This first reason is that users will have less trouble in deciding where to post their content since our program can give them recommendations where their post should go.   
-- Second, implementing this program can make sure that post are going in the right subreddits which would mean that advertising becomes more accurate, which means that advertisers are getting a better return on their ad spend.   
+If Reddit implements this idea this is an example mockup of what it could potentially look like:
 
+![](./assets/compare.png)
+
+Adding a clean suggestion box such as the one above will allow users to see the suggestion and either click that subreddit if they are unsure or they can still specify which subreddit they would like to post in.
+
+In the future I plan to add a lot more models such a random forrest, SVM, and optmizing the current LSTM RNN that I have. After adding these models I will be able to determine which is the best production NLP text classification model for the task of self classifying reddit posts. 
 
 <a name="cite"></a>
 ## Citations
