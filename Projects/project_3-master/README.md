@@ -107,7 +107,7 @@ With this model I was able to achieve a very good accuracy and a fairly low misc
 Although the LSTM RNN did not have the highest accuracy I will choose this model for the production model for a few reasons. LSTM RNN's are great at processing sequential data such as these reddit posts. I will have to add the content of the post so the model can train on a lot more words and understand the sequential nature of the text.
 
 Choosing this model is very important because when trying to create the recommendation system I will need a model that can 
-take in massive amounts of data and provide a great accuracy score with a low misclassification rate. 
+take in massive amounts of data and provide a great accuracy score with a low misclassification rate. This model has a lot of room to be optimized and fed more data so this is why I chose it as the production model.
 
 
 <a name="c&r"></a>
@@ -128,7 +128,7 @@ Although I got a pretty decent accuracy score for these two subreddits it is ver
 <a name="futuresteps"></a>
 ## Future Steps
 
-To be able to self classify the post as it is being written I will need a lot of data. In the future I plan to scrape Reddit and pull 2,000 posts from each subreddit. If I were able to pull approximately 2,000 posts from every single subreddit I will have a total of 2.4 billion posts. However, according to Reddit there are only 138,000 active subreddits so if I only pulled 2,000 posts from those subreddits I will have in total 276 million posts to work with. Scraping these posts will take some time and storage. Scraping the 276 million posts and gathering 2,000 posts from each subreddit would take approximately 24 hours using a multi threading scraping process. The final file would approximately be around 150 GB as well. 
+To be able to self classify the post as it is being written I will need a lot of data. In the future I plan to scrape Reddit and pull 2,000 posts from each active subreddit. According to Reddit there are only 138,000 active subreddits so if I only pulled 2,000 posts from those subreddits I will have in total 276 million posts to work with. Scraping these posts will take some time and storage. Scraping the 276 million posts and gathering 2,000 posts from each subreddit would take approximately 24 hours using a multi threading scraping process. The final file would approximately be around 150 GB as well. 
 
 Once this data is collected I plan to develop a better version of my LSTM RNN so it can learn over time with all of that collected data. However, before trying to run a model on all of the data I will take 10 different subreddits and see if my model can predict with a satisfactory accuracy score. If this model cannot beat the baseline accuracy score we now will know that this project is not possible. If it does pass this score we can continue adding subreddits and scaling up the model.
 
@@ -138,7 +138,7 @@ If Reddit implements this idea this is an example mockup of what it could potent
 
 Adding a clean suggestion box such as the one above will allow users to see the suggestion and either click that subreddit if they are unsure or they can still specify which subreddit they would like to post in.
 
-In the future I plan to add a lot more models such as a random forest, SVM, and optimizing the current LSTM RNN that I have. After adding these models I will be able to determine which is the best production NLP text classification model for the task of self classifying reddit posts. 
+In the future I plan to add a lot more models such as a random forest, SVM, and optimizing the current LSTM RNN that I have. After adding these models I will be able to determine which is the best production NLP text classification model for the task of creating an efficient and accurate subreddit recommendation system.
 
 <a name="cite"></a>
 ## Citations
