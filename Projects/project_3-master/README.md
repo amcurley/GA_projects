@@ -11,7 +11,8 @@ According to Reddit’s blog they had 199 million posts in 2019 alone and approx
 - [Project Directory](#projectdirectory)
 - [Executive Summary](#executivesummary)
 - [Data](#data)
-- [Modelling Process](#modellingprocess)
+- [Modeling Process](#modellingprocess)
+- [Production Model](#productionmodel)
 - [Conclusions & Recommendations](#c&r)
 - [Future Steps](#futuresteps)
 - [Citations](#cite)
@@ -24,12 +25,14 @@ According to Reddit’s blog they had 199 million posts in 2019 alone and approx
 project_3-master
 |__ assets 
 |   |__ naive_bayes_gs_cm.png
+|   |__ old_new.png
 |   |__ wordcount_graphs.png
 |__ code       
 |   |__ 01_get_data.ipynb  
 |   |__ 02_baseline_score.ipynb  
 |   |__ 03_title_only.ipynb  
-|   |__ 04_title_selftext.ipynb  
+|   |__ 04_title_selftext.ipynb
+|   |__ 05_lstm_rnn.ipynb  
 |__ data  
 |   |__ data_ai.csv  
 |   |__ data_ml.csv  
@@ -45,7 +48,7 @@ As Reddit continues to grow so does the chances of posting in the wrong subreddi
 
 So whats the solution to this problem? A way to reduce the likelihood of human error when selecting a subreddit is if Reddit had a recommendation system that as you are writing your reddit post it says with a certain amount of accuracy which subreddit that post should belong to. Implementing this could reduce the amount of posting in the wrong subreddit which could lead to cleaner subreddit's and potentially more targeted advertising within these subreddit's.   
 
-For this project I chose the two subreddits r/MachineLearning and r/artificial because these topics have a lot of overlapping content. Picking subreddit's that were similiar in content was important because if I will use Natural Language Processing and a variety of classification machine learning models such as logistic regression, naive bayes, and an LSTM RNN to classify a post to either be in the r/MachineLearning subreddit or the r/artificial subreddit. I will evaluate each of these models based on their accuracy scores. I chose a handful of models to see how the accuracy score improves as model complexitiy increases. 
+For this project I chose the two subreddits r/MachineLearning and r/artificial because these topics have a lot of overlapping content. Picking subreddit's that were similiar in content was important because if I can achieve a high enough accuracy on two very closely related topics I believe this concept can be applied to all of the subreddits. I will use Natural Language Processing and a variety of classification machine learning models such as logistic regression, naive bayes, and an LSTM RNN to classify a post to either be in the r/MachineLearning subreddit or the r/artificial subreddit. I will evaluate each of these models based on their accuracy scores. I chose a handful of models to see how the accuracy score improves as model complexitiy increases. 
 
 My best accuracy score so far was 86.15%. With this accuracy score on two subreddits that are very similiar in topic I am confident in moving forward with this project and moving on to the next steps. The next steps consist of creating this same process but for every subreddit on Reddit. 
 
@@ -53,7 +56,7 @@ My best accuracy score so far was 86.15%. With this accuracy score on two subred
 <a name="data"></a>
 ## Data 
 
-The data I am using for this project consists of a total of 31,299 posts from each subreddit which is 62,598 posts in total.  From these posts I only used the 'title'(the title of the post) and the 'selftext'(the content within the post) columns. I used the [pushshift api](https://github.com/pushshift/api) to scrape this data from reddit. For these two subreddits there were a couple cleaning steps that had to be addressed. In the 'selftext' column there were a lot of NaN values and removed and deleted posts. My way around these issue were replacing those values with a space so my models can still use that data. 
+The data I am using for this project consists of a total of 31,299 posts from each subreddit which is 62,598 posts in total.  From these posts I only used the 'title'(the title of the post) and the 'selftext'(the content within the post) columns. I used the [pushshift api](https://github.com/pushshift/api) to scrape this data from reddit. For these two subreddits there were a couple cleaning steps that had to be addressed. In the 'selftext' column there were a lot of NaN values and removed/deleted posts. My way around these issue were replacing those values with a space so my models can still use that data. 
 
 <a name="modellingprocess"></a>
 ## Modeling Process  
@@ -87,6 +90,8 @@ Since the models did not improve from adding the 'selftext' columns I will not c
 **LSTM RNN**
 - I was able to achieve an accuracy score of 81.60%
 
+I only used the titles for each post for my LSTM RNN, this was due to limited computing power and time constraints. I expect adding more data to the LSTM RNN will be able to learn the sequence of the words better which would output a greater accuracy score. 
+
 Since the model with the highest accuracy is the Gridseached Naive Bayes model with an accuracy score of 86.15%. I will choose this model as my final model.
 
 This is the confusion matrix for that model: 
@@ -94,6 +99,14 @@ This is the confusion matrix for that model:
 ![](./assets/naive_bayes_gs_cm.png)  
 
 With this model I was able to achive a very good accuracy and a fairly low missclassification rate for how close these subreddits are to each other in terms of content and topics. For future model iterations I would like to get the misclassifcation rate to below 10% but for how closely related these topics are it is satisfactory. Accuracy and missclassification rate are metrics that will be important to monitor in future advancements of this project. 
+
+<a name="productionmodel"></a>
+## Prodcution Model
+
+Although the LSTM RNN did not have the highest accuracy I will choose this model for the production model for a few reasons. LSTM RNN's are great at processing sequential data such as these reddit posts. I will have to add the content of the post so the model can train on a lot more words and understand the sequential nature of the text.
+
+Choosing this model is very important because when trying to create the recommendation system I will need a model that can 
+take in massive amounts of data and provide a great accuracy score with a low missclassification rate. 
 
 
 <a name="c&r"></a>
@@ -120,7 +133,7 @@ Once this data is collected I plan to develop a better version of my LSTM RNN so
 
 If Reddit implements this idea this is an example mockup of what it could potentially look like:
 
-![](./assets/compare.png)
+![](./assets/old_new.png)
 
 Adding a clean suggestion box such as the one above will allow users to see the suggestion and either click that subreddit if they are unsure or they can still specify which subreddit they would like to post in.
 
