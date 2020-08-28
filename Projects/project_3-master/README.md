@@ -33,7 +33,7 @@ project_3-master
 |__ data  
 |   |__ data_ai.csv  
 |   |__ data_ml.csv  
-|__ Presentation.pdf  
+|__ SubredditRecommendationSystem.pdf  
 |__ README.md  
 
 ```
