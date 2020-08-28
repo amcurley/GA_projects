@@ -1,4 +1,4 @@
-# Self Classifiying Reddit Posts
+# Subreddit Recommendation System
 
 Aidan Curley | US-DSIR-720 | 08.28.2020
 
