@@ -4,7 +4,7 @@ Aidan Curley | US-DSIR-720 | 08.28.2020
 
 ## Problem Statement  
 
-According to Reddit you can, “reach passionate and diverse communities organized around thousands of different topics, ” through advertising. Reddit had 199 million posts in 2019 alone according to their blog and approximately 138,000 active subreddits among their total 1.2 million subreddits. With so much information, how do they make sure people are posting in the right subreddits? Well they don't. So, how can we ensure the posts are going into the proper subreddit’s? Through machine learning! 
+According to Reddit’s blog they had 199 million posts in 2019 alone and approximately 138,000 active subreddits. With so much information, how do they make sure people are posting in the right subreddits? Well they don't. So, how can we ensure that posts are going into the proper subreddit’s? Through a recommendation system!
 
 ## Table of Contents
 
