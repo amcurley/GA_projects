@@ -33,7 +33,7 @@ for n in tech:
     get_post_link = get_post_link.get_attribute('href')
 
     # Adding the link we are clicking to urls to bring it onto the scraping process
-    urls.append(post_link)
+    urls.append(get_post_link)
 
     # Clicking the link to go to the page
     post_link.click()

@@ -277,3 +277,25 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1598817715080	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1598881535806	Marionette	INFO	Stopped listening on port 57602
+1598995432826	geckodriver	INFO	Listening on 127.0.0.1:58313
+1598995433848	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rp/q1sdzdzj6gz14y637d12psrh0000gn/T/rust_mozprofileAH8A85"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598995436844	Marionette	INFO	Listening on port 58324
+1598995436948	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1598995470626	geckodriver	INFO	Listening on 127.0.0.1:58430
+1598995471640	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rp/q1sdzdzj6gz14y637d12psrh0000gn/T/rust_mozprofile10baIL"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598995473699	Marionette	INFO	Listening on port 58441
+1598995473714	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1598995937675	geckodriver	INFO	Listening on 127.0.0.1:58620
+1598995938698	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rp/q1sdzdzj6gz14y637d12psrh0000gn/T/rust_mozprofileoIi9c8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598995943882	Marionette	INFO	Listening on port 58631
+1598995944037	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1598996378623	Marionette	INFO	Stopped listening on port 58324
+1598996381336	Marionette	INFO	Stopped listening on port 58441
+1598996384747	Marionette	INFO	Stopped listening on port 58631
