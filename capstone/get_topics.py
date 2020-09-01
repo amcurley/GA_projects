@@ -4,12 +4,13 @@
 import time
 import scrapy
 from selenium import webdriver
+from bs4 import BeautifulSoup
+
 browser = webdriver.Firefox(executable_path='/Users/aidancurley/Documents/dsir/capstone/geckodriver')
 
 
 # Innovation and Tech
 tech = ['accessibility'
-# , 'android-development'
 # , 'artificial-intelligence', 'blockchain',
 #         'cryptocurrency', 'data-science', 'digital-life', 'gadgets', 'ios-development',
 #         'javascript', 'machine-learning', 'math', 'neuroscience', 'programming', 'science',
@@ -17,7 +18,8 @@ tech = ['accessibility'
         ]
 
 
-urls = []
+urls = ['hi']
+
 for n in tech:
     browser.get('https://medium.com/topic/' + str(n))
 
@@ -31,7 +33,7 @@ for n in tech:
     get_post_link = get_post_link.get_attribute('href')
 
     # Adding the link we are clicking to urls to bring it onto the scraping process
-    urls.append(get_post_link)
+    urls.append(post_link)
 
     # Clicking the link to go to the page
     post_link.click()
