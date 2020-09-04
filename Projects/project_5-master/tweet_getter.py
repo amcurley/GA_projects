@@ -29,7 +29,7 @@ def DownloadTweets(SinceDate, UntilDate, query, sleep=900, maxtweet=0) :
     hmm = [n[0] for n in tweets]
     # print(hmm)
     # print(type(hmm))
-    return print(hmm)
+    return print(len(hmm))
 
 
 #%%
