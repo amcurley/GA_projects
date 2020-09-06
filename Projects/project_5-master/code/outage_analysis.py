@@ -4,7 +4,8 @@ import pandas as pd
 
 bad_words = ["Omari","Hardwick","50","cent","Joseph","Rotimi","Naturi","Naughton","Lela","Loren",
 "Larenz","Tate","internet","Internet","Shane","Johnson","Jerry","Ferrara","Lucy","Walters",
-"Sinqua","Walls","Andy","Bean","David","Fumero","Sung","Kang","kidding","jk","Ghost",""]
+"Sinqua","Walls","Andy","Bean","David","Fumero","Sung","Kang","kidding","jk","Ghost", "politics",
+"trump", "biden" "wifi"]
 
 final_csv = pd.read_csv('processed_csv.csv')
 
@@ -28,4 +29,6 @@ for test in tweets:
 
 csvs['label'] = label
 
+print(tweets)
 print(csvs)
+print(label)
