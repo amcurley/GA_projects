@@ -2,6 +2,7 @@ import tweepy
 import datetime
 import time
 import preprocess
+import pandas as pd
 # import neural network
 
 
@@ -33,17 +34,20 @@ x = 3
 # Check its architecture
 # new_model.summary()
 
+
+
 for tweet in tweepy.Cursor(api.search, q='doggies -filter:retweets').items(x):
     x -= 1
     tweets = []
     username = []
+    location = []
     try:
         if tweet.text[0] == "RT":
             pass
         else:
             tweets.append(tweet.text)
             username.append(tweet.user.screen_name)
-
+            location.append(tweet.user.location)
         time.sleep(5)
 
     except tweepy.TweepError as e:
@@ -72,38 +76,44 @@ for tweet in tweepy.Cursor(api.search, q='doggies -filter:retweets').items(x):
         #     pass
 
         # the screen name of the user
-    location_final = []
-    for xi in username:
-
-        screen_name = xi
-
-        try:
-            user = api.get_user(screen_name)
-
-            # fetching the name
-            name = user.name
-
-            location = user.location
-
-
-            if location == "":
-                location_final.append("The user has not mentioned their location")
-            else:
-                location_final.append(location)
-
-        except tw.TweepError:
-                print(f"The user {screen_name} does not exist")
-                location_final.append("The user has not mentioned their location")
-
-
-
-print(location_final)
+    time.sleep(5)
+    # location_final = []
+    # for xi in username:
+    #
+    #     screen_name = xi
+    #
+    #     try:
+    #         user = api.get_user(screen_name)
+    #
+    #         name = user.name
+    #
+    #         location = user.location
+    #
+    #
+    #         if location == "":
+    #             location_final.append("The user has not mentioned their location")
+    #         else:
+    #             location_final.append(location)
+    #
+    #     except tw.TweepError:
+    #             print(f"The user {screen_name} does not exist")
+    #             location_final.append("The user has not mentioned their location")
+    #
+    # time.sleep(5)
 
 
-        # # Like the tweet, follow, and comment under tweet
-        # Comment with Most important tip plus here is a link to more resources
+    # print(location_final)
+    #
+    #
+    #     # # Like the tweet, follow, and comment under tweet
+    #     # Comment with Most important tip plus here is a link to more resources
+    #
+    #     # @aidancurleyy We see you might have no power be safe! here is a list of
+    #     # resources/tips that you might need www.david.com
+    # print(username)
+    # print(each)
 
-        # @aidancurleyy We see you might have no power be safe! here is a list of
-        # resources/tips that you might need www.david.com
-        print(username)
-        print(each)
+david_df = pd.DataFrame({"tweet": tweets, "username": username, "location": location})
+
+
+print(david_df)
