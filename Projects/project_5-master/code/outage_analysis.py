@@ -1,20 +1,23 @@
 import utils
 import pandas as pd
-
+import numpy as np
 
 bad_words = ["Omari","Hardwick","50","cent","Joseph","Rotimi","Naturi","Naughton","Lela","Loren",
 "Larenz","Tate","internet","Internet","Shane","Johnson","Jerry","Ferrara","Lucy","Walters",
 "Sinqua","Walls","Andy","Bean","David","Fumero","Sung","Kang","kidding","jk","Ghost", "politics",
-"trump", "biden" "wifi"]
+"trump", "biden" "wifi's", "attorney", "point", "powerpoint", "girl", "guy", "black", "white", "austin",
+"abusing", "abused", "Starz", "starz",  "ruiz", "estelle", "kanan", "dre", "wifi", "hotel", "woman",
+"man", "guess", "potency", "competenecy", "competence", "brawn", "horsepower", "hp", "acceleration",
+"grunt", "vacation", "resort"]
 
-final_csv = pd.read_csv('processed_csv.csv')
+final_csv = pd.read_csv('../datasets/processed_csv.csv')
 
 
-csvs = final_csv.head()
+# csvs = final_csv.head()
 
 tweets = []
 
-for xi in csvs['tweet']:
+for xi in final_csv['tweet']:
     tweets.append(xi)
 
 
@@ -27,8 +30,13 @@ for test in tweets:
     else:
         label.append(1)
 
-csvs['label'] = label
+final_csv['label'] = label
 
-print(tweets)
-print(csvs)
-print(label)
+# print(tweets)
+print(final_csv.head())
+# print(label)
+print(final_csv.shape)
+print(final_csv['label'].value_counts())
+print(final_csv['label'].value_counts(normalize=True))
+
+final_csv.to_csv('../datasets/neuralnetwork.csv', index=False)

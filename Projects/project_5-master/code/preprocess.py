@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import re
 
-csv = pd.read_csv('../months_query/jul_2020_MPWO.csv', delimiter = ",")
+csv = pd.read_csv('../aidan_final_df.csv')
 
 # These will be replaced by a space ' '
 symbol_replace_space = re.compile('[/(){}\[\]\|@,;]')
@@ -27,7 +27,7 @@ def clean_text(tweet):
     tweet = tweet.lower()
 
     # Replace symbol_replace_space with a space
-    tweert = symbol_replace_space.sub(' ', tweet)
+    tweet = symbol_replace_space.sub(' ', tweet)
 
     # Replace bad_symbols with a space
     tweet = bad_symbols.sub('', tweet)
@@ -51,9 +51,11 @@ def clean_text(tweet):
 
     return tweet
 
-# Applying the clean_text function above to every title in df['title']
+# Applying the clean_text function above to every tweet
 csv['tweet'] = csv['tweet'].apply(clean_text)
 
-csv['tweet'][3] = "I had a power outage haha just kidding"
+csv['tweet'][3] = "my power went out haha just kidding it did not"
 
-csv.to_csv('processed_csv.csv', index=False)
+# print(csv.head())
+
+csv.to_csv('../datasets/processed_csv.csv', index=False)
