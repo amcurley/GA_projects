@@ -33,7 +33,7 @@ x = 3
 #
 # Check its architecture
 # new_model.summary()
-
+cords = {}
 
 
 for tweet in tweepy.Cursor(api.search, q='doggies -filter:retweets').items(x):
