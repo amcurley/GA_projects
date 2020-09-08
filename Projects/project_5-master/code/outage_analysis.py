@@ -40,3 +40,9 @@ print(final_csv['label'].value_counts())
 print(final_csv['label'].value_counts(normalize=True))
 
 final_csv.to_csv('../datasets/neuralnetwork.csv', index=False)
+
+"""
+
+After running this script you will now go onto the LSTM RNN notebook
+
+"""
