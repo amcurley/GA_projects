@@ -8,7 +8,7 @@ bad_words = ["Omari","Hardwick","50","cent","Joseph","Rotimi","Naturi","Naughton
 "trump", "biden" "wifi's", "attorney", "point", "powerpoint", "girl", "guy", "black", "white", "austin",
 "abusing", "abused", "Starz", "starz",  "ruiz", "estelle", "kanan", "dre", "wifi", "hotel", "woman",
 "man", "guess", "potency", "competenecy", "competence", "brawn", "horsepower", "hp", "acceleration",
-"grunt", "vacation", "resort"]
+"grunt", "vacation", "resort", "GOP", "nazi"]
 
 final_csv = pd.read_csv('../datasets/processed_csv.csv')
 
