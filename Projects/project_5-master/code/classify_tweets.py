@@ -1,15 +1,15 @@
 import pandas as pd
 import numpy as np
 import twitter_bot
+import tensorflow as tf
+from tensorflow import keras
 
+print(tf.__version__)
 
-
-
-
-new_model = tf.keras.models.load_model('saved_model/my_model')
+model = keras.models.load_model('/Users/aidancurley/Documents/dsir/Submissions/Projects/project_5-master')
 
 # Check its architecture
-new_model.summary()
+model.summary()
 
 
 
