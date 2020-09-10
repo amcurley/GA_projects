@@ -1,4 +1,3 @@
-import utils
 import pandas as pd
 import numpy as np
 
@@ -10,10 +9,8 @@ bad_words = ["Omari","Hardwick","50","cent","Joseph","Rotimi","Naturi","Naughton
 "man", "guess", "potency", "competenecy", "competence", "brawn", "horsepower", "hp", "acceleration",
 "grunt", "vacation", "resort", "GOP", "nazi"]
 
-final_csv = pd.read_csv('../datasets/processed_csv.csv')
+final_csv = pd.read_csv('../data/done_processing.csv')
 
-
-# csvs = final_csv.head()
 
 tweets = []
 
@@ -32,6 +29,11 @@ for test in tweets:
 
 final_csv['label'] = label
 
+
+# Add bad words csv's here!
+
+
+
 # print(tweets)
 print(final_csv.head())
 # print(label)
@@ -39,7 +41,7 @@ print(final_csv.shape)
 print(final_csv['label'].value_counts())
 print(final_csv['label'].value_counts(normalize=True))
 
-final_csv.to_csv('../datasets/neuralnetwork.csv', index=False)
+final_csv.to_csv('../data/ready_for_modeling.csv', index=False)
 
 """
 

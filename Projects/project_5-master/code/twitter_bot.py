@@ -13,13 +13,12 @@ consumer_secret= '0VtlM5UXl2ZLAL0WMMT9WQ0kHFz4ufKTtn8T1bNVNpvdzYb2Mi'# Don't hav
 access_token= '1301516905136771072-TrLtF8u5u0pUBmkSULnErXQcuyVk9i'# Don't have these in the final
 access_token_secret= 'hxCKEmbRNE1w0kn0H1owznIQJfuSjDGF3AaZLBCXgqQBO'# Don't have these in the final
 
-# StreamListener class inherits from tweepy.StreamListener and overrides on_status/on_error methods.
 class StreamListener(tweepy.StreamListener):
+
+    tweet_counter = 0 # Static variable
+
     def on_status(self, status):
-        # print(status.id_str)
-        # if "retweeted_status" attribute exists, flag this tweet as a retweet.
-        # main_count = 100
-        # while main_count >= 0
+        stati = []
         count = 2
         while count > 1:
 
@@ -30,35 +29,33 @@ class StreamListener(tweepy.StreamListener):
             else:
 
                 print(status.id_str)
+                stati.append(status.id_str)
                 # Extend tweet so it shows all characters
                 if hasattr(status,"extended_tweet"):
                     text = status.extended_tweet["full_text"]
                 else:
                     text = status.text
 
-                # check if this is a quote tweet.
-                is_quote = hasattr(status, "quoted_status")
-                quoted_text = ""
-                if is_quote:
-                    # check if quoted tweet's text has been truncated before recording it
-                    if hasattr(status.quoted_status,"extended_tweet"):
-                        quoted_text = status.quoted_status.extended_tweet["full_text"]
-                    else:
-                        quoted_text = status.quoted_status.text
-
                 # remove characters that might cause problems with csv encoding
                 remove_characters = [",","#","\n"]
                 for c in remove_characters:
                     text = text.replace(c," ")
-                    quoted_text = quoted_text.replace(c, " ")
 
-                with open("out.csv", "a", encoding='utf-8') as f:
-                    f.write("%s,%s,%s,%s,%s,%s\n" % (status.user.screen_name,is_retweet,is_quote,text,quoted_text, status.user.location))
+                with open("../data/out.csv", "a", encoding='utf-8') as f:
+                    f.write("%s,%s,%s,%s\n" % (status.user.screen_name,is_retweet,text, status.user.location)) # Need to fix this
 
             count -= 1
 
+            if StreamListener.tweet_counter <= 8: #This number plus 2 is how many tweets I will get!
+                StreamListener.tweet_counter += 1
+                pass
+            else:
+                stream.disconnect()
+
+
         time.sleep(5)
         count += 1
+        # StreamListener.tweet_counter += 1
 
     def on_error(self, status_code):
         print("Encountered streaming error (", status_code, ")")
@@ -73,7 +70,12 @@ if __name__ == "__main__":
     # initialize stream
     streamListener = StreamListener()
     stream = tweepy.Stream(auth=api.auth, listener=streamListener,tweet_mode='extended')
-    with open("out.csv", "w", encoding='utf-8') as f:
-        f.write("user,is_retweet,is_quote,text,quoted_text, location\n")
-    tags = [" python ", " coding ", " money ", " investing ", " nyc "]
-    stream.filter(locations=[-74.1687,40.5722,-73.8062,40.9467], track=tags)
+    with open("../data/out.csv", "w", encoding='utf-8') as f:
+        f.write("user,is_retweet,text,location\n")
+
+    tags = [" python ", " coding ", " money ", " investing ", " stocks "]
+    # These bounding boxes https://www.bmc.com/blogs/track-tweets-location/#:~:text=filter()%20method%20of%20Tweepy,are%20the%20top%20right%20corner.
+    NYC = [-74.1687,40.5722,-73.8062,40.9467] #check docs for these
+
+    stream.filter(locations= NYC#, #track = tags
+    )

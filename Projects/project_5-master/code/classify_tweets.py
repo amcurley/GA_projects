@@ -1,15 +1,29 @@
 import pandas as pd
+import tweepy
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+import sys
+import preprocess
 import numpy as np
-import twitter_bot
 import tensorflow as tf
 from tensorflow import keras
+import twitter_bot
 
-print(tf.__version__)
+exec(open("twitter_bot.py").read())
+# Bring in out csv from bot
+out = pd.read_csv('../data/out.csv')
 
-model = keras.models.load_model('/Users/aidancurley/Documents/dsir/Submissions/Projects/project_5-master')
+print(len(out))
 
-# Check its architecture
-model.summary()
+# Run through preprocessing
+
+
+# Run through modeling IF label == 1 save person else drop person
+
+
+
+
 
 
 
@@ -32,3 +46,7 @@ print(pred, labels[np.argmax(pred)])
 Then if 1 we grab that users location and map in tableau.
      if 0 we pass.
 """
+# if __name__ == '__main__':
+#     # service.py executed as script
+#     # do something
+#     twitter_bot.StreamListener(tweepy.StreamListener)
