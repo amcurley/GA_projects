@@ -74,7 +74,9 @@ if __name__ == "__main__":
         f.write("user,is_retweet,tweet,location, state, state_1\n")
 
     tags = [" python ", " coding ", " money ", " investing ", " stocks "]
+
     # These bounding boxes https://www.bmc.com/blogs/track-tweets-location/#:~:text=filter()%20method%20of%20Tweepy,are%20the%20top%20right%20corner.
+    # http://bboxfinder.com/#0.000000,0.000000,0.000000,0.000000
     NYC = [-74.1687,40.5722,-73.8062,40.9467] #check docs for these
 
     stream.filter(locations= NYC#, track = tags

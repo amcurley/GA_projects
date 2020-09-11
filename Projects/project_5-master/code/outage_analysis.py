@@ -33,10 +33,10 @@ final_csv['label'] = label
 # Add bad words csv's here!
 bad_words1 = pd.read_csv('../data/bad_words1.csv')
 bad_words2 = pd.read_csv('../data/bad_words2.csv')
-
+# Label all of these as non power outage tweets
 bad_words1['label'] = 0
 bad_words2['label'] = 0
-
+# Drop any NaN values
 bad_words1.dropna(inplace=True)
 bad_words2.dropna(inplace=True)
 
@@ -56,6 +56,6 @@ final_csv.to_csv('../data/ready_for_modeling.csv', index=False)
 
 """
 
-After running this script you will now go onto the LSTM RNN notebook
+After running this script you will now go onto the modeling
 
 """
