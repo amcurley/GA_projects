@@ -13,18 +13,18 @@ import twitter_bot
 exec(open("twitter_bot.py").read())
 # Bring in out csv from bot
 out = pd.read_csv('../data/out.csv')
-
-print(len(out))
-
+print(out.shape)
 # Run through preprocessing
+out['tweet'] = out['tweet'].apply(preprocess.clean_text)
 
-
+print(out['tweet'])
 # Run through modeling IF label == 1 save person else drop person
 
 
+model = tf.keras.models.load_model('../saved_model/lstm_rnn_model')
 
-
-
+accr = model.evaluate(X_test,y_test)
+print('Test set\n  Loss: {:0.3f}\n  Accuracy: {:0.3f}'.format(accr[0],accr[1]))
 
 
 """

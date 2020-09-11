@@ -12,7 +12,7 @@ csv = pd.read_csv('../data/ready_for_processing.csv')
 
 
 # These will be replaced by a space ' '
-symbol_replace_space = re.compile('[/(){}\[\]\|@,;]')
+symbol_replace_space = re.compile('[/(){}\[\]\|@,;.£]')
 
 # We will get rid of all these in the function below
 bad_symbols = re.compile('[^0-9a-z #+_]')
@@ -28,6 +28,9 @@ def clean_text(tweet):
 
     # Replace bad_symbols with a space
     tweet = bad_symbols.sub('', tweet)
+
+    # Make all of the text lower case
+    tweet = tweet.lower()
 
     # This gets rid of the integers
     tweet = re.sub(r'\d+', '', tweet)
