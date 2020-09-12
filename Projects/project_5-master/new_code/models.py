@@ -21,44 +21,44 @@ y=final_csv['label']
 X_train,X_test,y_train,y_test = train_test_split(X, y, random_state=42, stratify = y)
 
 # # Grid Searched Logistic Regression & Pickle
-# pipe_cvec_lr = Pipeline([
-#     ('cvec' , CountVectorizer()),
-#     ('lr' , LogisticRegression(max_iter=10_000))
-# ])
-#
+pipe_cvec_lr = Pipeline([
+    ('cvec' , CountVectorizer()),
+    ('lr' , LogisticRegression(max_iter=10_000))
+])
+
 pipe_cvec_params = {
     'cvec__max_features': [2_000, 4_000],
     'cvec__stop_words': [None, 'english'],
     'cvec__ngram_range': [(1,1), (2,2)]
 }
-#
-# gs_cvec_lr = GridSearchCV(pipe_cvec_lr,
-#                          param_grid=pipe_cvec_params,
-#                          cv=5)
-#
-# gs_cvec_lr.fit(X_train,y_train)
-# file_name_lr = "gridsearch_lr_model.sav"
-# pickle.dump(gs_cvec_lr, open(file_name_lr, "wb"))
-#
-# print(f'log_reg train score {gs_cvec_lr.score(X_train,y_train)}')
-# print(f'log_reg test score {gs_cvec_lr.score(X_test,y_test)}')
-#
-# # Grid Searched Naive Bayes & Pickle
-# pipe_cvec_nb = Pipeline([
-#     ('cvec' , CountVectorizer()),
-#     ('nb', MultinomialNB(alpha=.5))
-# ])
-#
-# gs_cvec_nb = GridSearchCV(pipe_cvec_nb,
-#                          param_grid=pipe_cvec_params,
-#                          cv = 5)
-#
-# gs_cvec_nb.fit(X_train,y_train)
-# file_name_nb = "gridsearch_nb_model.sav"
-# pickle.dump(gs_cvec_nb, open(file_name_nb, "wb"))
-#
-# print(f'nb train score {gs_cvec_nb.score(X_train,y_train)}')
-# print(f'nb test score {gs_cvec_nb.score(X_test,y_test)}')
+
+gs_cvec_lr = GridSearchCV(pipe_cvec_lr,
+                         param_grid=pipe_cvec_params,
+                         cv=5)
+
+gs_cvec_lr.fit(X_train,y_train)
+file_name_lr = "gridsearch_lr_model.sav"
+pickle.dump(gs_cvec_lr, open(file_name_lr, "wb"))
+
+print(f'log_reg train score {gs_cvec_lr.score(X_train,y_train)}')
+print(f'log_reg test score {gs_cvec_lr.score(X_test,y_test)}')
+
+# Grid Searched Naive Bayes & Pickle
+pipe_cvec_nb = Pipeline([
+    ('cvec' , CountVectorizer()),
+    ('nb', MultinomialNB(alpha=.5))
+])
+
+gs_cvec_nb = GridSearchCV(pipe_cvec_nb,
+                         param_grid=pipe_cvec_params,
+                         cv = 5)
+
+gs_cvec_nb.fit(X_train,y_train)
+file_name_nb = "gridsearch_nb_model.sav"
+pickle.dump(gs_cvec_nb, open(file_name_nb, "wb"))
+
+print(f'nb train score {gs_cvec_nb.score(X_train,y_train)}')
+print(f'nb test score {gs_cvec_nb.score(X_test,y_test)}')
 
 
 # Grid Searched RandomForest & Pickle
