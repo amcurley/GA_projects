@@ -8,6 +8,8 @@ import pandas as pd
 import numpy as np
 import re
 
+np.random.seed(42)
+
 csv = pd.read_csv('../data/ready_for_processing.csv')
 
 
