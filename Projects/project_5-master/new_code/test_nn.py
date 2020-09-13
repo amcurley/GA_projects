@@ -1,10 +1,21 @@
+"""
+
+
+"""
+
+
+
+
 
 def neural(out)
+
+# NOT SURE WHY THIS IS HERE
+
     # Vectorize the words and Create a common word dataframe
     cvec = CountVectorizer()
     cv_fit = cvec.fit_transform(out['tweet'])
     word_list = cvec.get_feature_names();
-    count_list = cv_fit.toarray().sum(axis=0)
+    count_list = cv_fit.toarray().sum(axis=0)       # ???
     word_dict = dict(zip(word_list,count_list))
     cleaned_df = pd.DataFrame(cv_fit.toarray(), columns= word_list)
     counter = Counter()

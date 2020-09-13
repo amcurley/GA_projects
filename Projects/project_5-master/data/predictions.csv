@@ -1,5 +1,4 @@
-user,is_retweet,tweet,location, state, state_1,predict_lr,predict_nb
-Cynthia2636,False,soooooo my power went out which means i have no electricity which means i cant work which means i guess work for today is done with ,None,,,0,0
-walt_whittaker,False, allenjs marklevinshow democrats have no intention of staging a coup thats alarmist bullshit and levin should be ashamed of himself for propagating this the only person i see whos advocating an armed insurrection to seize power is roger stone,Las Vegas, NV,,1,1
-kenhinabot,False, kikiyooz not giving any fucks posting another k fic tomorrow no one can hold me back i have the power of lia and anime on my side,he/him,,,1,1
-mehulmaniar,False, tsspdclcorporat no one answers when i try to call this number we still dont have power in phase what is the issue more than hours that we are without full partial power kindly help,India,,,1,1
+user,is_retweet,tweet,location, state, state_1,predict_lr,predict_nb,predict_rf,labels
+slimshadyevents,False,im anti nuclear power because no one man should have all that power,None,,,0,0,0.0,0
+Ichiro______1,False,tbh i planned to add reds pokemon in their r b y g s sprites whichever version i could find but the power went out so i was like fuck it and went with this instead https t co xcwlxlhus,14/Male/🇵🇭/Straight ,,,1,1,1.0,1
+exxizm,False,i have a recording of the provost saying no professor here thinks they have any power over a student from a meeting about this lol,nyc,,,1,1,0.9666666666666667,1
