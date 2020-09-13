@@ -28,28 +28,21 @@ class StreamListener(tweepy.StreamListener):
     def on_status(self, status):
 
         count = 2 # This is to pull in only 1 tweet per loop so we do not get rate limited
-
         while count > 1:
-
             is_retweet = hasattr(status, "retweeted_status")
-
             if is_retweet: # If the tweet has the attribute "retweeted_status" pass
                 pass
             else:
-
                 is_quote = hasattr(status, "quoted_status")
                 if is_quote: # If the tweet has the attribute "quoted_status" pass
                     pass
                 else:
-
                     print(status.id_str) # The id of the tweets that we pull
-
                     # Extend tweet so it shows all 280 characters
                     if hasattr(status,"extended_tweet"):
                         text = status.extended_tweet["full_text"]
                     else:
                         text = status.text
-
                     # Remove characters that might cause problems with csv encoding
                     remove_characters = [",","#","\n"]
                     for c in remove_characters:
