@@ -11,10 +11,10 @@ import sys
 
 np.random.seed(42)
 
-consumer_key= 'nOj8CQ7XjcNbTS9fFPp6wUNQF' # Don't have these in the final
-consumer_secret= '0VtlM5UXl2ZLAL0WMMT9WQ0kHFz4ufKTtn8T1bNVNpvdzYb2Mi'# Don't have these in the final
-access_token= '1301516905136771072-TrLtF8u5u0pUBmkSULnErXQcuyVk9i'# Don't have these in the final
-access_token_secret= 'hxCKEmbRNE1w0kn0H1owznIQJfuSjDGF3AaZLBCXgqQBO'# Don't have these in the final
+consumer_key= '9C0nedFj98hB83LQCsW5xIDvZ' # Don't have these in the final
+consumer_secret= 'J60uZyJ2JhZe0POGTdM7uUD6hno8kia42yg8TNBCIHHoUFS8l5'# Don't have these in the final
+access_token= '1301167716456374272-uzu12HXwfz4ibViifjX4k0oMyJtGGn'# Don't have these in the final
+access_token_secret= 'ELaOZdOQwi02S1olN4SHQo55h0VseazfUumuOmLTEDwno'# Don't have these in the final
 
 class StreamListener(tweepy.StreamListener):
 
