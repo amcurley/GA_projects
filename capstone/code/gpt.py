@@ -26,9 +26,9 @@ access_token_secret= 'jpsmsY6hddCUkzEIfyKLrGnOqk8nLSc3zMaWP9ugSpfYE'# Don't have
 authorization = tweepy.OAuthHandler(consumer_key, consumer_secret)
 authorization.set_access_token(access_token, access_token_secret)
 
+# Add GPT-2 here
 
-
-
+# out put of gpt-2 will got into {xi}
 
 twitter = tweepy.API(auth)
 for xi in range(out.shape[0]):
