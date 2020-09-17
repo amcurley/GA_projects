@@ -35,7 +35,6 @@ Our team's approach to developing this tool was to first determine which social 
 Before deploying a bot we had to train our models on a lot of data so when we pull in tweets from the bot we can get accurate predictions if the tweet is actually a power outage or not. So, we used GetOldTweets3 to scrape 280,000 tweets from January 1st, 2020 to August 31st, 2020. From those tweets 150,000 of them contain the queries "my power went out", "i lost power", "there is a power outage", or "I have no power." The remaining 130,000 tweets are for random queries such as "we went out shopping" and "The weather is nice." We wanted to add noise into our data so the models can better understand what tweets are actually about power outages. 
 
 
-
 ## Modeling Process
 After doing the intital data cleaning we moved on to
 
