@@ -1,14 +1,9 @@
 """
-
 After labeling our data we can move onto modeling. In this step we will gridsearch a
 logistic regression, multinominal naive bayes, and a random forest. We will pickle each of
-these models so we can bring them into classify_tweets.py to predict the label for new
+these models so we can bring them into 06_classify_tweets.py to predict the label for new
 tweets pulled in from the bot. These will be used in our multi layered prediction model.
-
 """
-
-
-
 import pandas as pd
 import numpy as np
 import pickle
@@ -19,13 +14,15 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV,train_test_split
 
+# Set random seed
 np.random.seed(42)
 
+# Import data
 final_csv = pd.read_csv('../data/ready_for_modeling.csv')
-
 print(final_csv.shape)
 print(final_csv.columns)
 
+# Train test split
 X=final_csv['tweet']
 y=final_csv['label']
 
@@ -48,6 +45,8 @@ gs_cvec_lr = GridSearchCV(pipe_cvec_lr,
                          cv=5)
 
 gs_cvec_lr.fit(X_train,y_train)
+
+# Save model in a pickled file named gridsearch_lr_model.sav
 file_name_lr = "gridsearch_lr_model.sav"
 pickle.dump(gs_cvec_lr, open(file_name_lr, "wb"))
 
@@ -65,12 +64,13 @@ gs_cvec_nb = GridSearchCV(pipe_cvec_nb,
                          cv = 5)
 
 gs_cvec_nb.fit(X_train,y_train)
+
+# Save model in a pickled file named gridsearch_nb_model.sav
 file_name_nb = "gridsearch_nb_model.sav"
 pickle.dump(gs_cvec_nb, open(file_name_nb, "wb"))
 
 print(f'nb train score {gs_cvec_nb.score(X_train,y_train)}')
 print(f'nb test score {gs_cvec_nb.score(X_test,y_test)}')
-
 
 # Grid Searched RandomForest & Pickle
 pipe_cvec_rf = Pipeline([
@@ -83,9 +83,10 @@ gs_cvec_rf = GridSearchCV(pipe_cvec_rf,
                          cv=5)
 
 gs_cvec_rf.fit(X_train,y_train)
+
+# Save model in a pickled file named gridsearch_rf_model.sav
 file_name_rf = "gridsearch_rf_model.sav"
 pickle.dump(gs_cvec_rf, open(file_name_rf, "wb"))
-
 
 print(f'rf train score {gs_cvec_rf.score(X_train,y_train)}')
 print(f'rf test score {gs_cvec_rf.score(X_test,y_test)}')
